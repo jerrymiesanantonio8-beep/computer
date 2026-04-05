@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 350vh;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(190, 52, 52));
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    font-family: "SUSE Mono", sans-serif;
+    overflow-y: auto;
+    color: rgb(255, 255, 255);
+}
+
+.close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.close-btn:hover {
+    box-shadow: 0 0 20px #dc0a0a, 0 0 30px #b60909;
+}
+
+.inventory-search {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border: 2px solid #000;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    font-family: "SUSE Mono", sans-serif;
+}
+
+.inventory-search::placeholder {
+    color: #aaa;
+}
+
+.inventory-search:focus {
+    border-color: #dc0a0a;
+    box-shadow: 0 0 10px #dc0a0a;
+}
+
+h2 {
+    margin-top: 80px;
+    color: #dc0a0a;
+    text-align: center;
+    text-shadow: 0 0 10px #ff0000;
+    font-size: 2em;
+}
+
+.inventory-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 2px solid #000;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-left: 5px solid #dc0a0a;
+    box-shadow: 0 0 10px #000;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    box-shadow: 0 0 20px #dc0a0a;
+    border-color: #dc0a0a;
+}
+
+.faq-question span {
+    font-size: 24px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.faq-question.active span {
+    transform: rotate(90deg);
+}
+
+.faq-question:focus-visible {
+    outline: 3px solid #dc0a0a;
+    outline-offset: -3px;
+    position: relative;
+}
+
+.faq-question:focus-visible::before {
+    content: '↓ ';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffff00;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.faq-answer {
+    background: rgba(190, 52, 52, 0.3);
+    padding: 20px;
+    display: none;
+    border-left: 5px solid #dc0a0a;
+    box-shadow: inset 0 0 20px rgba(220, 10, 10, 0.3);
+}
+
+.faq-answer p {
+    color: rgb(255, 255, 255);
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+    padding: flex 1;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 15em;
+    margin: 3em 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carousel .slides {
+    display: flex;
+    gap: 1em;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+    flex-shrink: 0;
+}
+
+.carousel .card {
+    flex: 0 0 255px;
+    height: 12em;
+    background-color: #353333;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 9px;
+
+    position: relative;
+}
+
+
+
+.carousel .card:hover img {
+    transform: scale(1.05);
+}
+
+.carousel .card h4 {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5em 1em;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 2;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.carousel .card:hover h4 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel .learn-more {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #dc0a0a, #b60909);
+    color: white;
+    border: none;
+    padding: 0.6em 1.5em;
+    border-radius: 25px;
+    font-family: "SUSE Mono", sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(220, 10, 10, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1em;
+}
+
+
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0d0d0d;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(220, 10, 10, 0.6);
+    z-index: 10;
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus {
+    opacity: 1;
+    box-shadow: 0 6px 20px rgba(224, 220, 220, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: translateY(-50%) scale(0.9) !important;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    width: 100px;
+    height: 90;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 90px;
+        left: 10px;
+    }
+}
+

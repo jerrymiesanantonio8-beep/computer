@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3D Computer View - Learn PC 3D</title>
+    <link rel="stylesheet" href="../css/homepage.css">
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <div class="starfield-bg">
+        <canvas id="starfield-canvas"></canvas>
+    </div>
+
+    <div class="intro-loader">
+        <h1 class="name">Welcome to Learn PC 3D</h1>
+    </div>
+
+    <main class="content">
+      
+        <a href="homepage.html" class="logo">
+            <img src="IMG/Logo.png" alt="3D Computer Logo">
+        </a>
+
+        
+        <div class="top-nav">
+            <a href="FAQs.html" class="faqs-btn">FAQs</a>
+            <a href="inventory.html" class="inventory-btn" onclick="openInventoryPage(document.querySelector('.search-bar')?.value);">Components</a>
+        </div>
+
+        
+        <div class="box">
+            <div class="home-content">
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search components...">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="content-bottom">
+                    <iframe src="https://my.spline.design/untitled-FPQ3ZdA9VY5QVpLUHJiT9TzJ/" frameborder="0" width="100%" height="100%"></iframe>
+                    <p class="description-right" data-text="A computer is an electronic device that is designed to receive, process, store, and output data. It works by following a set of instructions called programs or software. A computer can take input from users (like typing on a keyboard or clicking a mouse), process that information using its internal components (such as the CPU or “brain” of the computer), and then produce meaningful output (like displaying results on a screen or printing documents). Modern computers can perform billions of calculations per second, making them powerful tools for solving problems and managing information.
+
+The purpose of a computer is to make tasks easier, faster, and more accurate for people. Computers are used in many areas of life, such as education, business, communication, entertainment, healthcare, and science. For example, students use computers to research and learn new topics, businesses use them to store records and manage operations, and doctors use them to diagnose and treat patients. Computers also allow people to communicate instantly through the internet, using emails, video calls, and social media.
+
+Another important purpose of computers is automation. They can perform repetitive tasks without getting tired, which increases efficiency and productivity. In industries, computers control machines and systems to produce goods more quickly and with fewer errors. In daily life, they help with simple tasks like calculating numbers, organizing files, editing photos, and playing games.
+
+In addition, computers play a major role in storing and organizing large amounts of data. Information that would normally take up a lot of physical space can be stored digitally and accessed quickly. This helps individuals and organizations keep track of important data safely and efficiently.
+
+Overall, a computer is an essential tool in modern society. Its main purpose is to process information and assist humans in performing tasks more effectively, helping improve productivity, communication, and decision-making in almost every field."></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email: info@learnpc3d.com</p>
+                <p>Phone: +1 215 6556 5655</p>
+                <p>Address: 123 Tech Street</p>
+            </div>
+            <div class="footer-content">
+                <h3>About Us</h3>
+                <ul class="list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2026 Learn PC 3D. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.60/build/spline-viewer.js"></script>
+    <script src="../js/homepage.js"></script>
+</body>
+</html>
+
+
